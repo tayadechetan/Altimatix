@@ -5,15 +5,30 @@ import java.util.Collection;
 
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id")
     private Long id;
-
+    
+    @Column(name="first_name")
     private String firstName;
+    
+    @Column(name="last_name")
     private String lastName;
+    
+    @Column(name="current_year")
+    private String currentYear;
+    
+    @Column(name="email")
     private String email;
+    
+    @Column(name="mobile_number")
+    private String mobileNumber;
+    
+    @Column(name="password")
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
@@ -28,18 +43,22 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password) {
+    public User(String firstName, String lastName,String currentYear, String mobileNumber, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.currentYear = currentYear;
+        this.mobileNumber = mobileNumber;
         this.email = email;
         this.password = password;
     }
 
-    public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+    public User(String firstName, String lastName, String currentYear, String mobileNumber, String email, String password, Collection<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.currentYear = currentYear;
+        this.mobileNumber = mobileNumber;
         this.roles = roles;
     }
 
@@ -62,6 +81,22 @@ public class User {
     public String getLastName() {
         return lastName;
     }
+    public String getCurrentYear() {
+		return currentYear;
+	}
+
+	public void setCurrentYear(String currentYear) {
+		this.currentYear = currentYear;
+	}
+
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
 
     public void setLastName(String lastName) {
         this.lastName = lastName;

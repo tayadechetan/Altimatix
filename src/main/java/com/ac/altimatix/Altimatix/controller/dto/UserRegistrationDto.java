@@ -21,6 +21,12 @@ public class UserRegistrationDto {
 
     @NotEmpty
     private String password;
+    
+    @NotEmpty
+    private String mobileNumber;
+    
+    @NotEmpty
+    private String currentYear;
 
     @NotEmpty
     private String confirmPassword;
@@ -33,8 +39,8 @@ public class UserRegistrationDto {
     @NotEmpty
     private String confirmEmail;
 
-    @AssertTrue
-    private Boolean terms;
+//    @AssertTrue
+//    private Boolean terms;
 
     public String getFirstName() {
         return firstName;
@@ -84,12 +90,30 @@ public class UserRegistrationDto {
         this.confirmEmail = confirmEmail;
     }
 
-    public Boolean getTerms() {
-        return terms;
-    }
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
 
-    public void setTerms(Boolean terms) {
-        this.terms = terms;
-    }
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	public String getCurrentYear() {
+		return currentYear;
+	}
+
+	public void setCurrentYear(String currentYear) {
+		this.currentYear = currentYear;
+	}
+
+    
+    
+//    public Boolean getTerms() {
+//        return terms;
+//    }
+//
+//    public void setTerms(Boolean terms) {
+//        this.terms = terms;
+//    }
 
 }

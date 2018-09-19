@@ -27,10 +27,10 @@ spring:
     #username: username@gmail.com
     #password: secret
     #port: 587
-    host: mailrelay.intranet.hdp.be
-    username: test
-    password: test
-    port:
+    host: smtp.gmail.com
+    username: skyverse.in
+    password: Skyverse@123
+    port: 587
     properties:
       mail:
         smtp:

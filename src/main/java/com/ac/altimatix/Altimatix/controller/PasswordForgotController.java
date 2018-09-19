@@ -45,17 +45,17 @@ public class PasswordForgotController {
     public String processForgotPasswordForm(@ModelAttribute("forgotPasswordForm") @Valid PasswordForgotDto form,
                                             BindingResult result,
                                             HttpServletRequest request) {
-
+    	System.out.println("----------------------- f1 --------------------");
         if (result.hasErrors()){
             return "forgot-password";
         }
-
+        System.out.println("----------------------- f2 --------------------");
         User user = userService.findByEmail(form.getEmail());
         if (user == null){
             result.rejectValue("email", null, "We could not find an account for that e-mail address.");
             return "forgot-password";
         }
-
+        System.out.println("----------------------- f3 --------------------");
         PasswordResetToken token = new PasswordResetToken();
         token.setToken(UUID.randomUUID().toString());
         token.setUser(user);
@@ -63,7 +63,7 @@ public class PasswordForgotController {
         tokenRepository.save(token);
 
         Mail mail = new Mail();
-        mail.setFrom("no-reply@memorynotfound.com");
+        mail.setFrom("skyverse.in@gmail.com");
         mail.setTo(user.getEmail());
         mail.setSubject("Password reset request");
 
@@ -76,8 +76,8 @@ public class PasswordForgotController {
         mail.setModel(model);
         emailService.sendEmail(mail);
 
-        return "redirect:/forgot-password?success";
-
+//        return "redirect:/forgot-password?success";
+        return "redirect:/index";
     }
 
 }
