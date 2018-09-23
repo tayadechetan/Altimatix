@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SKYverse | Contact</title>
+<title>Pravakti | Contact</title>
 	
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -59,8 +59,8 @@
 		<nav class="navbar navbar-expand-lg navbar-light py-sm-4 py-2">
 			<!-- logo -->
 			<h1>
-				<a class="navbar-brand" href="index.html"> <i class="fab fa-affiliatetheme"></i>
-					SKYverse
+				<a class="navbar-brand" href="/index"> <i class="fab fa-affiliatetheme"></i>
+					Pravakti
 				</a>
 			</h1>
 			<!-- //logo -->
@@ -77,24 +77,25 @@
 						</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="about.html">About</a>
+						<a class="nav-link" href="/about">About</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="services.html">Services</a>
+						<a class="nav-link" href="/services">Services</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="course.html">Courses</a>
+						<a class="nav-link" href="/course">Courses</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="course.html">Jobs</a>
+						<a class="nav-link" href="#" data-toggle="modal" data-dismiss="modal" data-target="#jobModal">Jobs</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="course.html">Projects</a>
+						<a class="nav-link" href="/projects">Projects</a>
 					</li>
 					<li class="nav-item mr-3">
-						<a class="nav-link" href="contact.html">Contact</a>
+						<a class="nav-link" href="/contact">Contact</a>
 					</li>
-					<!-- search --->
+					<!-- search -->
+					<li>
 					<div class="search-bar-agileits">
 						<div class="cd-main-header">
 							<ul class="cd-header-buttons">
@@ -108,7 +109,7 @@
 							</form>
 						</div>
 					</div>
-					<!-- search --->
+					<!-- search -->
 
 					</li>
 				</ul>
@@ -170,7 +171,7 @@
 						<h6 class="ad-info text-uppercase mb-2">Email</h6>
 							<a href="#">sayalijadhav136@gmail.com </a>
 							<a href="#"> chetanvt1992@gmail.com</a>
-                            <a href="#"> skyverse@gmail.com</a>
+                            <a href="#"> pravakti@gmail.com</a>
 					</div>
 
 				</div>
@@ -227,7 +228,7 @@
 			</div>
 		</div>
         
-        <div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=12.9596761, 77.714073&amp;q=Parimila%20Ivory%2C%20Laxminarayanapura%2C%20Bangalore+(Skyverse%20Co.%20Ltd.)&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Create Google Map</a></iframe></div><br/>
+        <div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=12.9596761, 77.714073&amp;q=Parimila%20Ivory%2C%20Laxminarayanapura%2C%20Bangalore+(pravakti%20Co.%20Ltd.)&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Create Google Map</a></iframe></div><br/>
 		
 	</div>
 </section>	
@@ -244,7 +245,7 @@
 					<p class="mb-3"><i class="fas fa-map-marker"></i> 10, 60 Feet Rd, Lakshminarayana Pura, Brookefield<br/>Bengaluru City Karnataka.</p>
 					<p><i class="fas fa-clock"></i> Timings : 10 a.m to 6 p.m</p>
 					<p><i class="fas fa-phone"></i> 09620965136</p>
-					<p><i class="fas fa-envelope-open"></i> <a href="#">skyverse@gmail.com</a></p>
+					<p><i class="fas fa-envelope-open"></i> <a href="#">pravakti@gmail.com</a></p>
 				</address>
 			</div>
 			<div class="col-lg-2 col-sm-6 mt-lg-0 mt-sm-0 mt-4 p-md-0">
@@ -302,6 +303,25 @@
 
 <!-- footer -->
 <!-- Login modal -->
+<div class="modal fade" id="jobModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-uppercase" id="exampleModalLabel1">Job</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					 <p class="center">Only Available For Forth Year</p>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+	
+	
+<!-- Login modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -312,26 +332,113 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="#" method="post" class="p-3">
+					 <p th:if="${param.error}" class="error">
+            			Bad Credentials  
+        			</p>
+					<!-- <form th:action="@{/login}" method="post" class="p-3"> -->
+					<form th:action="@{/j_spring_security_check}" method="post" class="p-3">
 						<div class="form-group">
 							<label for="recipient-name" class="col-form-label">User Name</label>
-							<input type="email" class="form-control" placeholder="User Name" name="Name" id="recipient-name" required=""/>
+							<input type="email" class="form-control" placeholder="Email" name="username" required=""/>
 						</div>
 						<div class="form-group">
 							<label for="recipient-name1" class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder="Password" name="Name" id="recipient-name1" required=""/>
+							<input type="password" class="form-control" placeholder="Password" name="password" required=""/>
 						</div>
-						<div class="right-w3l mt-4 mb-3">
+						<div class="form-group right-w3l mt-4 mb-3">
 							<input type="submit" class="form-control" value="Login"/>
+						</div>
+						<div class="row right-w3l">
+                			<div class="col-md-12">
+               					     New user? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal1">Register</a>
+                			</div>
+                			<div class="col-md-12">
+                    			<p style="padding-right: 50px;">Forgot password? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#forgotModal">Reset password</a></p>
+                			</div>
+            			</div>
+					</form>
+
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+	<!-- Login modal -->
+
+
+<!-- reset modal -->
+	<div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-uppercase" id="exampleModalLabel1">Reset Password</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+				
+					<form th:action="@{/reset-password}" th:object="${passwordResetForm}" method="post" class="p-3">
+						<div class="form-group" th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+							<label for="password" class="col-form-label">Password</label>
+							<input id="password" type="password" class="form-control" placeholder="Password" th:field="*{password}"/>
+						</div>
+						<div class="form-group" th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">
+							<label for="confirmPassword" class="col-form-label">confirm Password</label>
+							<input id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password" th:field="*{confirmPassword}" />
+						</div>
+						<div class="form-group right-w3l mt-4 mb-3">
+							<input type="submit" class="form-control" value="Reset password"/>
+						</div>
+						<div class="row right-w3l">
+                			<div class="col-md-12">
+               					     New user? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal1">Register</a>
+                			</div>
+                			<div class="col-md-12">
+                    			<p style="padding-right: 50px;">Already registered? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal">Login</a></p>
+                			</div>
+            			</div>
+					</form>
+
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- forgot modal -->
+	<div class="modal fade" id="forgotModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3><i class="glyphicon glyphicon-lock" style="font-size:2em;"></i></h3>
+                        <h2 class="text-center">Forgot Password?</h2>
+                        <p>Enter your e-mail address and we'll send you a link to reset your password.</p>
+				</div>
+				<div class="modal-body">
+					<div th:if="${param.success}">
+                                <div class="alert alert-info">
+                                    You've successfully requested a new password reset!
+                                </div>
+                            </div>
+					<form th:action="@{/forgot-password}" th:object="${forgotPasswordForm}" method="post" class="p-3">
+						<div class="form-group" th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+							<label for="email" class="col-form-label">email</label>
+							<input id="email" class="form-control" placeholder="email address" th:field="*{email}"/>
+						</div>
+						<div class="form-group right-w3l mt-4 mb-3">
+							<input type="submit" class="form-control" value="Reset password"/>
 						</div>
 					</form>
 
 				</div>
+				 
 			</div>
 		</div>
 	</div>
-	<!-- //Login modal -->
-
+	
+	
 	<!-- Register modal -->
 	<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -343,33 +450,46 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="#" method="post" class="p-3">
-						<div class="form-group">
-							<label for="recipient-name" class="col-form-label">First Name</label>
-							<input type="text" class="form-control" placeholder="First Name" name="Name" id="recipient-name2" required=""/>
+					<form th:action="@{/registration}" th:object="${user}" method="post" class="p-3">
+						<div class="form-group" th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
+							<label for="firstName" class="col-form-label">First Name</label>
+							<input id="firstName" type="text" class="form-control" placeholder="First Name" th:field="*{firstName}" />
 						</div>
-						<div class="form-group">
-							<label for="recipient-name" class="col-form-label">Last Name</label>
-							<input type="text" class="form-control" placeholder="Last Name" name="Name" id="recipient-name3" required=""/>
+						<div class="form-group" th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
+							<label for="lastName" class="col-form-label">Last Name</label>
+							<input id="lastName" type="text" class="form-control" placeholder="Last Name" th:field="*{lastName}"  />
 						</div>
-                         <div class="form-group">
-							<label for="recipient-name" class="col-form-label">Current Year</label>
-							<input type="text" class="form-control" placeholder="2nd Year" name="year" id="recipient-name4" required=""/>
+                        <div class="form-group" th:classappend="${#fields.hasErrors('currentYear')}? 'has-error':''">
+							<label for="currentYear" class="col-form-label">Current Year</label><br/>
+							<!-- <select type="text" placeholder="select" name="year" id="currentYear" th:field="*{currentYear}" />
+    							<option th:value="2">2</option>
+    							<option th:value="3">3</option>
+    							<option th:value="4">4</option>
+  							</select> -->
+							<input id="currentYear" type="text" class="form-control" placeholder="2nd Year" th:field="*{currentYear}"  />
 						</div>
-						<div class="form-group">
-							<label for="recipient-name" class="col-form-label">Email id</label>
-							<input type="email" class="form-control" placeholder="Email id" name="Name" id="recipient-name4" required=""/>
+						<div class="form-group" th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+							<label for="email" class="col-form-label">Email id</label>
+							<input id="email" type="email" class="form-control" placeholder="Email id"   th:field="*{email}" />
 						</div>
-						<div class="form-group">
-							<label for="recipient-name" class="col-form-label">Mobile Number</label>
-							<input type="text" class="form-control" placeholder="Mobile Number" name="Name" id="recipient-name5" required=""/>
+						<div class="form-group" th:classappend="${#fields.hasErrors('confirmEmail')}? 'has-error':''">
+							<label for="confirmEmail" class="col-form-label">Confirm Email id</label>
+							<input id="confirmEmail" type="email" class="form-control" placeholder="Confirm e-mail" th:field="*{confirmEmail}"/>
 						</div>
-						<div class="form-group">
-							<label for="recipient-name1" class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder="Password" name="Name" id="recipient-name6" required=""/>
+						<div class="form-group" th:classappend="${#fields.hasErrors('mobileNumber')}? 'has-error':''">
+							<label for="mobileNumber" class="col-form-label">Mobile Number</label>
+							<input id="mobileNumber" type="text" class="form-control" placeholder="Mobile Number" th:field="*{mobileNumber}"  />
 						</div>
-						<div class="right-w3l mt-4 mb-3">
-							<input type="submit" class="form-control" value="Create account"/>
+						<div class="form-group" th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+							<label for="password" class="col-form-label">Password</label>
+							<input id="password" type="password" class="form-control" placeholder="Password" th:field="*{password}"/>
+						</div>
+						<div class="form-group" th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">
+							<label for="confirmPassword" class="col-form-label">confirm Password</label>
+							<input id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password" th:field="*{confirmPassword}" />
+						</div>
+						<div class="right-w3l mt-4 mb-3 form-group">
+							<input type="submit" class="btn btn-primary form-control" value="Create account"/>
 						</div>
 					</form>
 
@@ -377,7 +497,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- //Register modal -->
+	<!-- Register modal -->
 
 
 	<!-- js -->

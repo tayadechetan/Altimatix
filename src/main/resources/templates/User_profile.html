@@ -15,7 +15,12 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
+        .user{
+        	 color: blue;
+    font-size: 15px;
+        }
     </script>
+    <script type="text/javascript" src="js/userScript.js"></script>
     <!-- Custom Theme files -->
     <link href="css/bootstrap1.css" type="text/css" rel="stylesheet" media="all"/>
     <link href="css/style3.css" type="text/css" rel="stylesheet" media="all"/>
@@ -42,7 +47,7 @@
             <nav id="menu" class="panel">
                 <ul>
                     <li>
-                        <a href="User_home.html">Home</a>
+                        <a href="/User_home">Home</a>
                     </li>
                     <li>
                         <a href="#">Jobs</a>
@@ -50,9 +55,9 @@
                     <li>
                         <a href="project.html">Projects</a>
                     </li>
-                    <li>
-                        <a href="#s">contact</a>
-                    </li>
+                     <li>
+                        <a href="/logout">Logout</a>
+                </li>
                 </ul>
             </nav>
             <!-- //nav -->
@@ -75,9 +80,10 @@
                         <div class="profile-image">
                             <img src="images/about.jpg" alt="about _image" class="img-fluid" />
                         </div>
-                        <h2 class="profile-title">James
+                        <h2 class="profile-title">James <input id="user" value="${user}"/>
                             <span>Smith</span>
                         </h2>
+                        <input type="hidden" id="user" value="${user}"/>
                         <div class="profile-info">
                             <div class="content">
                                 <div class="row  pro-contact">
@@ -144,6 +150,7 @@
     <script src="js/SmoothScroll1.min.js "></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap1.js"></script>
+    
 </body>
 
 </html>

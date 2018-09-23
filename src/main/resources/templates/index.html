@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>SKYverse| Home</title>
+<title>Pravakti| Home</title>
 
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -19,11 +19,18 @@
 		position: absolute;
 		left:10%;
 		}
+		.center {
+  position: absolute;
+  top:13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 	</script>
 	<!-- Meta tag Keywords -->
     
 	<!-- css files -->
 	<link rel="stylesheet" href="css/bootstrap.css"/> <!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="css/popup.css"/>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
 	<link rel="stylesheet" href="css/fontawesome-all.css"/> <!-- Font-Awesome-Icons-CSS -->
 	<!-- css files -->
@@ -64,8 +71,8 @@
 		<nav class="navbar navbar-expand-lg navbar-light py-sm-4 py-2">
 			<!-- logo -->
 			<h1>
-				<a class="navbar-brand" href="index.html"> <i class="fab fa-affiliatetheme"></i>
-					SKYverse
+				<a class="navbar-brand" href="/index"> <i class="fab fa-affiliatetheme"></i>
+					Pravakti
 				</a>
 			</h1>
 			<!-- logo -->
@@ -77,27 +84,28 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-lg-auto text-center">
 					<li class="nav-item active  mr-lg-3">
-						<a class="nav-link" href="index.html">Home
+						<a class="nav-link" href="/index">Home
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="about.html">About</a>
+						<a class="nav-link" href="/about">About</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="/services">Servicessssss</a>
+						<a class="nav-link" href="/services">Services</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="course.html">Courses</a>
+						<a class="nav-link" href="/course">Courses</a>
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="course.html">Jobs</a>
+					<a class="nav-link" href="#" data-toggle="modal" data-dismiss="modal" data-target="#jobModal">Jobs</a>
+						<!-- <a class="nav-link" href="">Jobs</a> -->
 					</li>
 					<li class="nav-item mr-lg-3">
-						<a class="nav-link" href="course.html">Projects</a>
+						<a class="nav-link" href="/projects">Projects</a>
 					</li>
 					<li class="nav-item mr-3">
-						<a class="nav-link" href="contact.html">Contact</a>
+						<a class="nav-link" href="/contact">Contact</a>
 					</li>
 					<!-- search -->
 					<div class="search-bar-agileits">
@@ -155,7 +163,7 @@
 <!-- welcome -->
 <section class="welcome py-5" id="welcome">
 	<div class="container py-sm-3">
-		<h3 class="heading text-capitalize mb-lg-5 mb-4"> Welcome to SKYverse </h3>
+		<h3 class="heading text-capitalize mb-lg-5 mb-4"> Welcome to Pravakti </h3>
 		<div class="row welcome-grids">
 			<div class="col-lg-4 mb-lg-0 mb-5">
 				<h4>Start your career</h4>
@@ -213,7 +221,7 @@
 				</div>
 				<div class="col-lg-9 col-10">
 					<h4>Experienced Staff</h4>
-					<p>Aenean tristique, duiid aet blandit elt ultricies, ligula elit interd ures turpis, a bibendum lib.</p>
+					<p>We have IITans and NITans to take care of you along with people working in top multinational companies.</p>
 				</div>
 			</div>
 			<div class="row col-lg-4 mb-lg-0 mb-5">
@@ -222,7 +230,7 @@
 				</div>
 				<div class="col-lg-9 col-10">
 					<h4>New Technologies</h4>
-					<p>Aenean tristique, duiid aet blandit elt ultricies, ligula elit interd ures turpis, a bibendum lib.</p>
+					<p>We update ourself as market grows. This is an era of innovations and  technologies helps to innovate. We have experts in Machine learning, Internet of things, cloud computing, big data, blockchain etc.</p>
 				</div>
 			</div>
 			<div class="row col-lg-4">
@@ -231,7 +239,7 @@
 				</div>
 				<div class="col-lg-9 col-10">
 					<h4>Job Oportunities</h4>
-					<p>Aenean tristique, duiid aet blandit elt ultricies, ligula elit interd ures turpis, a bibendum lib.</p>
+					<p>Market is looking for efficient resources and we promise to create the same. Our leaders have experience of top MNC’s will help to to get into market to get the job that suites you.</p>
 				</div>
 			</div>
 		</div>
@@ -249,8 +257,8 @@
 				<div class="service-grid1">
 					<i class="fas fa-globe"></i>
 					<h5>1</h5>
-					<h4 class="mb-3">Free Online Courses</h4>
-					<p>Aenean tristique, duiid blandit elt ultricies, ligula elit interd ures turpis, a bibendum lib.</p>
+					<h4 class="mb-3">Online Courses</h4>
+					<p>We provide online courses for languages as well as new technologies. We provide interactive session for students to get classroom experience.</p>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 mt-md-0 mt-5">
@@ -258,7 +266,7 @@
 					<i class="fas fa-book"></i>
 					<h5>2</h5>
 					<h4 class="mb-3">Internship Programs</h4>
-					<p>Aenean tristique, duiid blandit elt ultricies, ligula elit interd ures turpis, a bibendum lib.</p>				
+					<p>15 days internship program with our leaders will help you grow technically. Experiencing theory and  implementing with you imagination is what we give in this internship.</p>				
 				</div>
 			</div>
             <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
@@ -266,7 +274,7 @@
 					<i class="fas fa-book"></i>
 					<h5>3</h5>
 					<h4 class="mb-3">New Technologies</h4>
-					<p>Aenean tristique, duiid blandit elt ultricies, ligula elit interd ures turpis, a bibendum lib.</p>				
+					<p>We update our self as market grows. This is an era of innovations and technologies helps to innovate. We have experts in Machine learning, Internet of things, cloud computing, big data, blockchain etc.</p>				
 				</div>
 			</div>
 			<div class="ser-button mt-4">
@@ -397,7 +405,7 @@
 					<p class="mb-3"><i class="fas fa-map-marker"></i> 10, 60 Feet Rd, Lakshminarayana Pura, Brookefield<br/>Bengaluru City Karnataka.</p>
 					<p><i class="fas fa-clock"></i> Timings : 10 a.m to 6 p.m</p>
 					<p><i class="fas fa-phone"></i> 09620965136</p>
-					<p><i class="fas fa-envelope-open"></i> <a href="#">skyverse@gmail.com</a></p>
+					<p><i class="fas fa-envelope-open"></i> <a href="#">pravakti@gmail.com</a></p>
 				</address>
 			</div>
 			<div class="col-lg-2 col-sm-6 mt-lg-0 mt-sm-0 mt-4 p-md-0">
@@ -453,6 +461,25 @@
 
 </footer>
 <!-- footer -->
+
+<div class="modal fade" id="jobModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-uppercase" id="exampleModalLabel1">Job</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					 <p class="center">Only Available For Forth Year</p>
+				</div>
+				 
+			</div>
+		</div>
+	</div>
+	
+	
 <!-- Login modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -632,6 +659,7 @@
 	<!-- Register modal -->
 
 
+
 	<!-- js -->
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
@@ -696,6 +724,7 @@ $(document).ready(function(){
         $("#exampleModal1").modal();
     });
 });
+
 </script>
 <script>
 $(document).ready(function(){
@@ -704,5 +733,27 @@ $(document).ready(function(){
     });
 });
 </script>
+<script>
+$(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});
+</script>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">X</div>
+        <p>Add any HTML content<br />inside the popup box!</p>
+    </div>
+</div>
+
 </body>
 </html>
