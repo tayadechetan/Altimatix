@@ -1,6 +1,7 @@
 package com.ac.altimatix.Altimatix.controller;
 
 import java.security.Principal;
+
 import com.google.gson.Gson;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -56,8 +58,11 @@ public class UserProfileController {
       Gson gson = new Gson();
 
       ModelAndView modelAndView = new ModelAndView("User_profile");
+//      ModelAndView modelAndView = new ModelAndView();
+//      modelAndView.setViewName("demo");
       modelAndView.addObject("user", gson.toJson(user));
-
+//      modelAndView.addObject("name", "chetan");
+//      return "User_profile";
       return modelAndView;
 	 }
 	 
@@ -81,11 +86,11 @@ public class UserProfileController {
     @RequestMapping("/project")
     public String userProject() {
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		if (!(auth instanceof AnonymousAuthenticationToken)) {
+//		if (!(auth instanceof AnonymousAuthenticationToken)) {
     	System.out.println("############# User Project #################### " );
         return "project";
-        }else{
-        	return "error";
-        }
+//        }else{
+//        	return "error";
+//        }
     }
 }

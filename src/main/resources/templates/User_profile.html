@@ -80,9 +80,14 @@
                         <div class="profile-image">
                             <img src="images/about.jpg" alt="about _image" class="img-fluid" />
                         </div>
-                        <h2 class="profile-title">James <input id="user" value="${user}"/>
+                        //<![CDATA[
+							
+      						<input type="hidden" id="user" value="${user}"/>
+   						//]]>
+                        <h2 class="profile-title">James <input type="hidden" id="user" value="${user}"/>
                             <span>Smith</span>
                         </h2>
+                        <h1>${user} ${user.firstName}</h1>
                         <input type="hidden" id="user" value="${user}"/>
                         <div class="profile-info">
                             <div class="content">
@@ -138,6 +143,7 @@
     </footer>
     <!-- //footer -->
     <!-- js -->
+    <script src="jquery-1.11.3.min.js"></script>
     <script src="js/jquery-2.2.3.min.js"></script>
     <!-- //js -->
     <!-- few java snippets-->
