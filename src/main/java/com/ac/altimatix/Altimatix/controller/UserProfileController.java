@@ -1,6 +1,8 @@
 package com.ac.altimatix.Altimatix.controller;
 
 import java.security.Principal;
+import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -73,15 +75,35 @@ public class UserProfileController {
     }
 	
     @RequestMapping("/User_home")
-    public String userInfo() {
+    public ModelAndView userInfo() {
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (!(auth instanceof AnonymousAuthenticationToken)) {
     	System.out.println("############# User home #################### " );
-        return "User_home";
+    	ModelAndView model = new ModelAndView();
+    	model.addObject("users", getUsers());
+    	model.setViewName("User_home");
+    	return model;
         }else{
-        	return "error";
+        	ModelAndView model = new ModelAndView();
+        	model.setViewName("error");
+        	return model;
         }
     }
+    private List<User> getUsers() {
+		User user = new User();
+		user.setEmail("johndoe123@gmail.com");
+		user.setFirstName("John Doe");
+		User user1 = new User();
+		user1.setEmail("amitsingh@yahoo.com");
+		user1.setFirstName("Amit Singh");
+		User user2 = new User();
+		user2.setEmail("bipulkumar@gmail.com");
+		user2.setFirstName("Bipul Kumar");
+		User user3 = new User();
+		user3.setEmail("prakashranjan@gmail.com");
+		user3.setFirstName("Prakash Ranjan");
+		return Arrays.asList(user, user1, user2, user3);
+	}
     
     @RequestMapping("/project")
     public String userProject() {
